@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=Gochi+Hand&display=swap');
+
 html,
 body {
+  height: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Josefin Slab, Helvetica Neue, sans-serif;
+}
+
+#__next {
+  height: 100%;
+  background: #ff4ca3;
 }
 
 a {
@@ -11,6 +18,8 @@ a {
   text-decoration: none;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
