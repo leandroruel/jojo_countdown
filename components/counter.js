@@ -49,7 +49,7 @@ export default function Counter() {
   return (
       <div className="flex flex-col rounded-lg bg-white p-5">
         <div className="p-4 border-b" id="featured">
-          <h1 className="text-lg font-semibold mb-3">Joestar's inherited Soul</h1>
+          <h1 className="text-lg font-semibold mb-3 event-title">Joestar's inherited Soul</h1>
           <div className="grid grid-cols-4 mb-4">{timerComponents.length ? timerComponents : <span>Time's up!</span>}</div>
           <a href="#" className="btn btn--primary">share this event</a>
         </div>

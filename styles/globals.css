@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=Gochi+Hand&display=swap?family=DM+Serif+Display&display=swap');
 
 html,
 body {
@@ -10,7 +10,25 @@ body {
 
 #__next {
   height: 100%;
-  background: #ff4ca3;
+  background-color: #ff4ca3;
+  background-image:
+    linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0.1)
+    );
+    background-size: 70px 120px;
 }
 
 a {
