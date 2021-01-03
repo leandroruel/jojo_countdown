@@ -1,18 +1,18 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Counter from 'components/counter'
+import Copyright from 'components/copyright'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Jojo Countdown</title>
+        <link rel="icon" href="/favicon-32x-32.png" />
       </Head>
-      
-        <main className={styles.main}>
-          <h1 className={styles['coming-soon']}>Something great is coming...</h1>
-          <p className={styles.copyright}>© 2020 荒木飛呂彦 & LUCKY LAND COMMUNICATIONS / 集英社・ジョジョの奇妙な冒険</p>
-        </main>
+      <main className="flex flex-col justify-center items-center h-screen">
+        <Counter />
+        <Copyright />
+      </main>
     </>
   )
 }

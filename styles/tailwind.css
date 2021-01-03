@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply text-base font-medium rounded-lg p-3;
+}
+
+.btn--primary {
+    @apply bg-red-500 hover:bg-red-700 text-white;
+}
+
+.btn--secondary {
+    @apply bg-gray-100 text-black;
+}
+
+.text-bg-gradient-blue {
+    @apply bg-gradient-to-t from-blue-600 to-blue-200 bg-clip-text text-transparent;
+}
+
+.text-huge {
+    font-size: 8rem;
+}
