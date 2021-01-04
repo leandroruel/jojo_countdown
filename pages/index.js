@@ -11,10 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon-32x-32.png" />
       </Head>
       <main className="flex flex-col justify-center items-center h-screen">
-        <div className="flex flex-col rounded-lg bg-white p-5">
-          <Event events={events} />
-        </div>
-        <Copyright />
+        <Event events={events} />
       </main>
     </>
   )

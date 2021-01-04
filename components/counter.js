@@ -11,7 +11,6 @@ export default function Counter(props) {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
       };
     }
 
@@ -36,7 +35,7 @@ export default function Counter(props) {
 
     timerComponents.push(
       <div className="flex flex-col items-center p-4" key={index}>
-        <span className="text-huge font-sans font-bold text-bg-gradient-blue">
+        <span className="text-xl text-gray-900 font-sans font-bold">
           {timeLeft[interval]}
         </span>
         <span className="text-xl font-bold">
@@ -48,7 +47,7 @@ export default function Counter(props) {
 
   return (
     <>
-      <div className="grid grid-cols-4 mb-4">{timerComponents.length ? timerComponents : <span>Time's up!</span>}</div>
+      <div className="grid grid-cols-3 mb-4">{timerComponents.length ? timerComponents : <span>Time's up!</span>}</div>
     </>
   )
 }
