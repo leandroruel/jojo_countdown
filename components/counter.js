@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
-export default function Counter() {
+export default function Counter(props) {
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    const difference = +new Date('2021-04-04') - +new Date();
+    const difference = +new Date(props.start) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -47,12 +47,8 @@ export default function Counter() {
   });
 
   return (
-      <div className="flex flex-col rounded-lg bg-white p-5">
-        <div className="p-4 border-b" id="featured">
-          <h1 className="text-lg font-semibold mb-3 event-title">Joestar's inherited Soul</h1>
-          <div className="grid grid-cols-4 mb-4">{timerComponents.length ? timerComponents : <span>Time's up!</span>}</div>
-          <a href="#" className="btn btn--black">share this event</a>
-        </div>
-      </div>
+    <>
+      <div className="grid grid-cols-4 mb-4">{timerComponents.length ? timerComponents : <span>Time's up!</span>}</div>
+    </>
   )
 }
