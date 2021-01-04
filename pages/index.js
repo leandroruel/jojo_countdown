@@ -10,7 +10,7 @@ export default function Home() {
         <title>Jojo Countdown</title>
         <link rel="icon" href="/favicon-32x-32.png" />
       </Head>
-      <main className="flex flex-col justify-center items-center h-screen">
+      <main className="flex flex-col justify-center lg:items-center h-screen">
         <Event events={events} />
       </main>
     </>

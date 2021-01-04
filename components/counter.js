@@ -35,7 +35,7 @@ export default function Counter(props) {
 
     timerComponents.push(
       <div className="flex flex-col items-center p-4" key={index}>
-        <span className="text-xl text-gray-900 font-sans font-bold">
+        <span className="text-xl text-gray-900 bg-gray-100 p-5 font-sans font-bold">
           {timeLeft[interval]}
         </span>
         <span className="text-xl font-bold">
