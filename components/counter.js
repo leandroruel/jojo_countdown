@@ -38,7 +38,7 @@ export default function Counter(props) {
         <span className="text-xl text-gray-900 bg-gray-100 p-5 font-sans font-bold">
           {timeLeft[interval]}
         </span>
-        <span className="text-xl font-bold">
+        <span className="text-sm font-bold uppercase text-gray-400">
           {interval}
         </span>
       </div>

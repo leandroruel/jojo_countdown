@@ -8,8 +8,7 @@ body {
   font-family: Josefin Slab, Helvetica Neue, sans-serif;
 }
 
-#__next {
-  height: 100%;
+body {
   animation: bg-color 20s ease-in-out .2s infinite;
   transition: background-color 5s ease-in-out;
   background-image:
@@ -30,6 +29,11 @@ body {
       rgba(0, 0, 0, 0.1)
     );
     background-size: 70px 120px;
+}
+
+#__next {
+  height: 100%;
+  
 }
 
 a {
