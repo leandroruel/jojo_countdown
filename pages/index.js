@@ -11,7 +11,8 @@ export default function Home(props) {
      description="The biggest event about jojo's bizarre adventure"
      twitterHandle="jojofag"
      currentURL=""
-     siteName="JoJo Countdown" />
+     siteName="JoJo Countdown"
+     previewImage="/img/jojo-event-main.jpg" />
     </>
   )
 }
