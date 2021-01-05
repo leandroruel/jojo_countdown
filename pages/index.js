@@ -1,18 +1,17 @@
 import Head from 'next/head'
-import Event from 'pages/event'
+import Event from 'components/event'
 import Copyright from 'components/copyright'
-import { events } from 'events.json'
+import Layout from 'components/layout'
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
-      <Head>
-        <title>Jojo Countdown</title>
-        <link rel="icon" href="/favicon-32x-32.png" />
-      </Head>
-      <main className="flex flex-col justify-center lg:items-center h-screen">
-        <Event events={events} />
-      </main>
+     <Layout children={<Event />}
+     pageTitle="Jojo's Bizarre Adventure - The Animation Event Countdown"
+     description="The biggest event about jojo's bizarre adventure"
+     twitterHandle="jojofag"
+     currentURL=""
+     siteName="JoJo Countdown" />
     </>
   )
 }

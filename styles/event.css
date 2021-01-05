@@ -7,3 +7,7 @@
 .event-date {
     font-size: 3rem;
 }
+
+.event-description a {
+    color: #0033ff;
+}

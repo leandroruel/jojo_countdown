@@ -1,20 +1,19 @@
 import Counter from 'components/counter'
 import Modal from 'components/modal'
 import ShareButtons from 'utils/webshare'
+import { events } from 'events.json'
 
-export default function Event(props) {
-    const most_recent = props.events.reduce((a, b) => (a.start_date < b.start_date? a : b))
+export default function Event() {
+    const most_recent = events.reduce((a, b) => (a.start_date < b.start_date? a : b))
     const cover = most_recent.cover
     const day = (new Date(most_recent.start_date)).getDate()
     const month = (new Date(most_recent.start_date)).toLocaleString('en-us', { month: 'long' })
-    const shareButtons = () => {
-       return (<Modal title="Spread the Jojo word" content="" />)
-    }
 
     return (
-        <div className="sm:rounded-none lg:rounded-lg lg:h-4/5 sm:h-auto sm:w-full lg:w-4/5 bg-cover bg-no-repeat bg-center relative" style={{backgroundImage: `url(${cover})`}}>
-            <div className="bg-white lg:w-3/6 sm:w-full rounded-lg md:p-10 sm:p-5 lg:absolute lg:-bottom-20 lg:inset-x-1/2 lg:transform lg:-translate-x-1/2">
+        <div className="sm:rounded-none lg:rounded-lg lg:h-4/5 sm:h-auto sm:bg-none sm:w-full lg:w-4/5 bg-cover bg-no-repeat bg-center relative" style={{backgroundImage: `url(${cover})`}}>
+            <div className="bg-white lg:w-3/6 sm:w-full rounded-lg p-2 sm:p-5 md:p-10 lg:absolute lg:-bottom-20 lg:inset-x-1/2 lg:transform lg:-translate-x-1/2">
                 <div className="lg:text-6xl sm:text-2xl font-semibold mb-4 text-center capitalize">{most_recent.name}</div>
+                <div className="text-gray-500 event-description" dangerouslySetInnerHTML={{__html:most_recent.description}}></div>
                 <Counter start={most_recent.start_date} />
                 <div className="flex flex-row items-center justify-around py-5">
                     <div className="flex flex-row justify-between items-center border-2 py-5 px-4 rounded-lg">
