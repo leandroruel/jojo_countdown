@@ -10,7 +10,7 @@ export default function Event() {
     const month = (new Date(most_recent.start_date)).toLocaleString('en-us', { month: 'long' })
 
     return (
-        <div className="sm:rounded-none lg:rounded-lg lg:h-4/5 sm:h-auto sm:bg-none sm:w-full lg:w-4/5 bg-cover bg-no-repeat bg-center relative" style={{backgroundImage: `url(${cover})`}}>
+        <div className="sm:rounded-none lg:rounded-lg lg:h-4/5 sm:h-auto sm:w-full lg:w-4/5 bg-cover bg-no-repeat bg-center relative" style={{backgroundImage: `url(${cover})`}}>
             <div className="bg-white lg:w-3/6 sm:w-full rounded-lg p-2 sm:p-5 md:p-10 lg:absolute lg:-bottom-20 lg:inset-x-1/2 lg:transform lg:-translate-x-1/2">
                 <div className="lg:text-6xl sm:text-2xl font-semibold mb-4 text-center capitalize">{most_recent.name}</div>
                 <div className="text-gray-500 event-description" dangerouslySetInnerHTML={{__html:most_recent.description}}></div>
