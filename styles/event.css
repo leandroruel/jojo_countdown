@@ -11,3 +11,7 @@
 .event-description a {
     color: #0033ff;
 }
+
+.event-description::first-letter {
+    text-transform: capitalize;
+}

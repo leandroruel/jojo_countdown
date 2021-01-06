@@ -22,7 +22,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
       </Head>
       <section>
         <Header />
-        <div className="content flex flex-col justify-center lg:items-center h-screen">{children}</div>
+        <div className="content flex flex-col justify-center items-center h-screen">{children}</div>
       </section>
     </>
   )
