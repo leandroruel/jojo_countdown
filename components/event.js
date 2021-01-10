@@ -20,7 +20,7 @@ export default function Event() {
                         <div className="font-semibold pr-4">share:</div>
                         <ShareButtons title={most_recent.title} url="https://jojocountdown.com" />
                     </div>
-                    <div className="calendar rounded-lg border-2 px-4 py-2 flex flex-col justify-center items-center">
+                    <div className="calendar bg-white rounded-lg border-2 px-4 py-2 flex flex-col justify-center items-center">
                         <span className="event-date font-semibold leading-10 text-pink-500">
                             {day < 10 ? `0${day}` : day}
                         </span>
