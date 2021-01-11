@@ -2,7 +2,9 @@ import Countdown from "react-countdown";
 
 export default function Counter(props) {
   // Random component
-  const Completionist = () => <span>You are good to go!</span>;
+  const Completionist = () => (
+    <span>The event is now live! go check it out!</span>
+  );
 
   // Renderer callback with condition
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
