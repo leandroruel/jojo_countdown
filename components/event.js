@@ -1,24 +1,24 @@
 import Counter from "components/counter";
 import ShareButtons from "utils/webshare";
 import useEvent from "hooks/useEvent";
+import mostRecent from "utils/recentEvent";
+import Spinner from "components/spinner";
 
 export default function Event() {
+  const { event, isLoading, isError } = useEvent();
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   const {
+    eventDate,
     eventName,
     eventDescription,
-    eventCover,
-    eventDate,
     eventDay,
     eventMonth,
-  } = useEvent();
-
-  if (!eventDate) {
-    return (
-      <div className="bg-white font-lg text-center p-4">
-        Nenhum evento disponível
-      </div>
-    );
-  }
+    eventCover,
+  } = mostRecent(event);
 
   return (
     <div
