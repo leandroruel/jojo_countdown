@@ -1,12 +1,23 @@
-import useSWR from "swr";
-import fetcher from "utils/fetcher";
+import { useEffect, useState } from "react";
 
 const useEvent = (id = "") => {
-  const { data, error } = useSWR(`/api/post/${id}`, fetcher);
+  let [event, setEvent] = useState([]);
+  let [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch(`/api/post/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        event = setEvent(data);
+      })
+      .catch((error) => {
+        error = setError(error);
+      });
+  }, []);
 
   return {
-    event: data,
-    isLoading: !error && !data,
+    event: event,
+    isLoading: !error && !event,
     isError: error,
   };
 };
