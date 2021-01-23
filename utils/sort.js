@@ -19,4 +19,4 @@ const sortByDateDesc = (data = []) => {
   return data.sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
 };
 
-export default { sortByDateDesc };
+export { sortByDateDesc, mostRecent };
