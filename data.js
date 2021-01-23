@@ -8,7 +8,6 @@ export const event = [
     end_date: "2021-04-05 00:00:00",
     image: "/img/jojo-event-main.jpg",
     location: "japan",
-    featured: true,
     active: true,
     locales: [
       {
@@ -30,7 +29,6 @@ export const event = [
     end_date: "2021-02-18 12:00:00",
     image: "/img/jojo-event-main.jpg",
     location: "japan",
-    featured: false,
     active: false,
     locales: [
       {
@@ -51,7 +49,6 @@ export const event = [
     end_date: "2021-03-18 12:00:00",
     image: "/img/jojo-event-main.jpg",
     location: "japan",
-    featured: false,
     active: false,
     locales: [
       {
