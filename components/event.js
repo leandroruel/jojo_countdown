@@ -1,11 +1,13 @@
 import Counter from "components/counter";
-import ShareButtons from "utils/webshare";
-import useEvent from "hooks/useEvent";
-import mostRecent from "utils/recentEvent";
 import Spinner from "components/spinner";
+import ShareButtons from "utils/webshare";
+import mostRecent from "utils/sort";
+import useEvent from "hooks/useEvent";
+import { useRouter } from "next/router";
 
 export default function Event() {
   const { event, isLoading, isError } = useEvent();
+  const { locale } = useRouter();
 
   if (isLoading) {
     return <Spinner />;
