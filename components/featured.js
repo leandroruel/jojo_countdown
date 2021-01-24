@@ -1,10 +1,13 @@
 import Image from "next/image";
+import TimeRemaining from "components/timeRemaining";
 
 export default function Featured({ event }) {
   return (
     <div className="bg-black p-4 flex flex-col">
       <h1 className="font-semibold text-white text-8xl">{event.location}</h1>
-      <p className="text-sm text-white my-4">{event.start_date}</p>
+      <p className="text-sm text-white my-4">
+        <TimeRemaining datetime={event.start_date} />
+      </p>
       <div className="m-auto w-4/5">
         <Image
           src={event.image}
