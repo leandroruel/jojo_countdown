@@ -28,10 +28,8 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <link rel="icon" href="/favicon-32x-32.png" />
         <title>{pageTitle}</title>
       </Head>
-      <section>
-        <Header />
-        <div className="bg-gray-100">{children}</div>
-      </section>
+      <Header />
+      <section>{children}</section>
     </>
   );
 }

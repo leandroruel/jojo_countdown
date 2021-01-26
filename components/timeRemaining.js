@@ -7,7 +7,7 @@ export default function timeRemaining({ datetime }) {
 
   //get the string location
   const getLang = translations.find((result) => result.lang == locale).data;
-  console.log(getLang);
+
   // Random component
   const Completionist = () => (
     <span>
