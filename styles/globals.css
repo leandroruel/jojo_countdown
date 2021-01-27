@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=Gochi+Hand&display=swap?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=Gochi+Hand&display=swap?family=Roboto&display=swap");
 
 html,
 body {
@@ -6,29 +6,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: Josefin Slab, Helvetica Neue, sans-serif;
-}
-
-body {
-  animation: bg-color 20s ease-in-out .2s infinite;
-  transition: background-color 5s ease-in-out;
-  background-image:
-    linear-gradient(
-      60deg,
-      rgba(0, 0, 0, 0.1) 25%,
-      transparent 25%,
-      transparent 75%,
-      rgba(0, 0, 0, 0.1) 75%,
-      rgba(0, 0, 0, 0.1)
-    ),
-    linear-gradient(
-      120deg,
-      rgba(0, 0, 0, 0.1) 25%,
-      transparent 25%,
-      transparent 75%,
-      rgba(0, 0, 0, 0.1) 75%,
-      rgba(0, 0, 0, 0.1)
-    );
-    background-size: 70px 120px;
 }
 
 #__next {
@@ -44,31 +21,4 @@ a {
 *::after,
 *::before {
   box-sizing: border-box;
-}
-
-@keyframes bg-color {
-  0% {
-    background-color: #ff4ca3;
-  }
-  14% {
-    background-color: #bda0d8;
-  }
-  28% {
-    background-color: #882592;
-  }
-  42% {
-    background-color: #424344;
-  }
-  56% {
-    background-color: #f2a90c;
-  }
-  70% {
-    background-color: #c0e600;
-  }
-  84% {
-    background-color: #023c74;
-  }
-  100% {
-    background-color:  #ff4ca3;
-  }
 }
