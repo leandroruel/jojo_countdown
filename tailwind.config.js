@@ -1,5 +1,7 @@
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
-  purge: ['./pages/**/*.js', './components/**/*.js'],
+  purge: ["./pages/**/*.js", "./components/**/*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -7,5 +9,15 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
-}
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        ".w-change-transform": {
+          "will-change": "transform",
+        },
+      };
+
+      addUtilities(newUtilities);
+    }),
+  ],
+};

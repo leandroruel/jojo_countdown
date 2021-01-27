@@ -32,7 +32,7 @@ export const event = [
     active: false,
     locales: [
       {
-        ptBR: [
+        "pt-BR": [
           {
             name: "Jojolion capítulo 105",
             description: "",
@@ -52,7 +52,7 @@ export const event = [
     active: false,
     locales: [
       {
-        ptBR: [
+        "pt-BR": [
           {
             name: "Jojolion capítulo 106",
             description: "",

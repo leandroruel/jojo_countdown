@@ -6,6 +6,7 @@ import Layout from "components/layout";
 import useEvent from "hooks/useEvent";
 import { sortByDateDesc } from "utils/sort";
 import { useEffect, useState } from "react";
+import Banner from "components/banner";
 
 export default function Home() {
   const { event, isLoading } = useEvent();
@@ -29,7 +30,8 @@ export default function Home() {
       siteName="JoJo Countdown"
       previewImage="/img/jojo-event-main.jpg"
     >
-      {featured != null && featured != undefined ? (
+      <Banner />
+      {/* {featured != null && featured != undefined ? (
         <Featured event={featured} />
       ) : (
         <div></div>
@@ -38,7 +40,7 @@ export default function Home() {
         {sortByDateDesc(event).map((ev) => {
           return <ListItem key={ev.id} event={ev} />;
         })}
-      </List>
+      </List> */}
     </Layout>
   );
 }
