@@ -13,7 +13,7 @@ export default function NavItem({ item }) {
       <div className="relative">
         <button
           type="button"
-          onClick={toggleMenuClass}
+          onMouseEnter={toggleMenuClass}
           className={`group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 
           ${isActive ? "focus:ring-indigo-900" : "focus:ring-indigo-500"}
           `}
