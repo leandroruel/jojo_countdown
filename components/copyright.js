@@ -9,7 +9,7 @@ export default function Copyright() {
                     border-t border-gray-500 text-gray-400 text-sm 
                     flex-col md:flex-row max-w-6xl"
       >
-        <div className="mt-2">© {year} Kyuppu - All Rights Reserved</div>
+        <div className="mt-2">© {year} Kyappu - All Rights Reserved</div>
 
         <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
           <a href="#" className="w-6 mx-1">

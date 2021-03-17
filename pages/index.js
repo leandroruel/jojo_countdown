@@ -1,12 +1,10 @@
-import Featured from "components/featured";
-import List from "components/list";
-import ListItem from "components/listItem";
 import Spinner from "components/spinner";
 import Layout from "components/layout";
 import useEvent from "hooks/useEvent";
 import { sortByDateDesc } from "utils/sort";
 import { useEffect, useState } from "react";
 import Banner from "components/banner";
+import Carousel from "components/carousel";
 
 export default function Home() {
   const { event, isLoading } = useEvent();
@@ -30,17 +28,30 @@ export default function Home() {
       siteName="JoJo Countdown"
       previewImage="/img/jojo-event-main.jpg"
     >
-      <Banner />
-      {/* {featured != null && featured != undefined ? (
-        <Featured event={featured} />
-      ) : (
-        <div></div>
-      )}
-      <List>
-        {sortByDateDesc(event).map((ev) => {
-          return <ListItem key={ev.id} event={ev} />;
-        })}
-      </List> */}
+      <Banner>
+        <Carousel element="glide-slider">
+          <a
+            href="/"
+            className="flex rounded-md max-w-full h-96 md:h-64 lg:h-auto overflow-hidden"
+          >
+            <img
+              src="https://placehold.it/1250x250/ccc"
+              className="h-full md:h-64 lg:h-auto max-w-full"
+              alt="test"
+            />
+          </a>
+          <a
+            href="/"
+            className="flex rounded-md max-w-full h-96 md:h-64 lg:h-auto overflow-hidden"
+          >
+            <img
+              src="https://placehold.it/1250x250/ccc"
+              className="h-full md:h-64 lg:h-auto max-w-full"
+              alt="test 2"
+            />
+          </a>
+        </Carousel>
+      </Banner>
     </Layout>
   );
 }
