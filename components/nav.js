@@ -11,14 +11,11 @@ export default function Nav({ nav }) {
 
   return (
     <nav className="hidden md:flex space-x-10">
-      <NavItem item={{ name: "Solutions", submenu: "", url: "/" }} />
-      <NavItem
-        item={{
-          name: "More",
-          submenu: [{ id: 212, name: "Help center", icon: "" }],
-          url: "/",
-        }}
-      />
+      <NavItem item={{ name: "Watch List", submenu: "", url: "/" }} />
+      <NavItem item={{ name: "Hot", submenu: "", url: "/" }} />
+      <NavItem item={{ name: "Events", submenu: "", url: "/" }} />
+      <NavItem item={{ name: "News", submenu: "", url: "/" }} />
+      <NavItem item={{ name: "Discussions", submenu: "", url: "/" }} />
     </nav>
   );
 }
