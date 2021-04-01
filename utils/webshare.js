@@ -10,10 +10,10 @@ export default function SocialShareButtons(props) {
             <FacebookShareButton url={props.url} title={props.title} className="mr-2">
                 <FacebookIcon size={32} round={true} />
             </FacebookShareButton>
-            <RedditShareButton url={props.url} className="mr-2">
+            <RedditShareButton url={props.url} className="mr-2 hidden md:inline">
                 <RedditIcon size={32} round={true} />
             </RedditShareButton>
-            <LineShareButton url={props.url} className="mr-2">
+            <LineShareButton url={props.url} className="mr-2 hidden md:inline">
                 <LineIcon size={32} round={true} />
             </LineShareButton>
             <WhatsappShareButton url={props.url}>

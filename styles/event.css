@@ -15,3 +15,54 @@
 .event-description::first-letter {
     text-transform: capitalize;
 }
+
+.menacing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 8%;
+    width: 100%;
+}
+
+.menacing__kanji {
+    width: clamp(40px, 224px, 324px);
+    height: clamp(31px, 181px, 281px);
+    background-image: url(/img/menacing.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: shake 0.52s cubic-bezier(.36,.07,.19,.97) infinite both;
+    transform: translate3d(0, 0, 0);
+}
+
+.menacing__kanji:nth-of-type(1) {
+    margin-top: -25px;
+}
+
+.menacing__kanji:nth-of-type(3) {
+    margin-top: 25px;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, -2px, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, -2px, 0);
+    }
+  }
+
+  @media (min-width: 61.25rem) {
+    .menacing {
+        top: 30%;
+    }
+  }

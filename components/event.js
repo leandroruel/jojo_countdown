@@ -34,7 +34,7 @@ export default function Event() {
           dangerouslySetInnerHTML={{ __html: eventDescription }}
         ></div>
         <Counter start={new Date(eventDate)} />
-        <div className="flex flex-row items-center justify-around py-5">
+        <div className="flex flex-column md:flex-row items-center justify-around py-5">
           <div className="flex flex-row justify-between items-center border-2 py-5 px-4 rounded-lg">
             <div className="font-semibold pr-4">share:</div>
             <ShareButtons title={eventName} url="https://jojocountdown.com" />

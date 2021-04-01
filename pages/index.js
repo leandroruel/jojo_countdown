@@ -2,6 +2,7 @@ import Head from "next/head";
 import Event from "components/event";
 import Copyright from "components/copyright";
 import Layout from "components/layout";
+import Menacing from "components/menacing";
 
 export default function Home(props) {
   return (
@@ -14,6 +15,7 @@ export default function Home(props) {
       previewImage="/img/jojo-event-main.jpg"
     >
       <Event />
+      <Menacing />
     </Layout>
   );
 }
