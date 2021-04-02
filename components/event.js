@@ -1,6 +1,7 @@
 import Counter from "components/counter";
 import ShareButtons from "utils/webshare";
 import useEvent from "hooks/useEvent";
+import { DateTime } from "luxon";
 
 export default function Event() {
   const {
@@ -15,7 +16,7 @@ export default function Event() {
   if (!eventDate) {
     return (
       <div className="bg-white font-lg text-center p-4">
-        Nenhum evento disponível
+        No event available.
       </div>
     );
   }
