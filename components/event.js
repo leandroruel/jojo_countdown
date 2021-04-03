@@ -1,9 +1,11 @@
 import Counter from "components/counter";
 import ShareButtons from "utils/webshare";
 import useEvent from "hooks/useEvent";
-import { DateTime } from "luxon";
+import { useCookies, getCookie } from "react-cookie";
 
 export default function Event() {
+  const [cookie, setCookie] = useCookies(["userTimezone"]);
+
   const {
     eventName,
     eventDescription,
@@ -13,6 +15,12 @@ export default function Event() {
     eventMonth,
   } = useEvent();
 
+  setCookie("userTimezone", new Date(eventDate), {
+    path: "/",
+    maxAge: 31536000, // Expires after 1year
+    sameSite: true,
+  });
+
   if (!eventDate) {
     return (
       <div className="bg-white font-lg text-center p-4">
@@ -20,7 +28,7 @@ export default function Event() {
       </div>
     );
   }
-
+console.log(new Date(cookie.userTimezone))
   return (
     <div
       className="rounded-lg lg:h-4/5 sm:h-auto w-10/12 lg:w-4/5 bg-cover bg-no-repeat bg-center relative"
@@ -34,7 +42,8 @@ export default function Event() {
           className="text-gray-500 event-description"
           dangerouslySetInnerHTML={{ __html: eventDescription }}
         ></div>
-        <Counter start={new Date(eventDate)} />
+        <Counter start={new Date(cookie.userTimezone)} />
+        <div className="text-center text-pink-600 text-2xl">in your timezone: { new Date(cookie.userTimezone).toLocaleString() }</div>
         <div className="flex flex-column md:flex-row items-center justify-around py-5">
           <div className="flex flex-row justify-between items-center border-2 py-5 px-4 rounded-lg">
             <div className="font-semibold pr-4">share:</div>
