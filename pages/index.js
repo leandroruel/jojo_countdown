@@ -14,9 +14,9 @@ export default function Home(props) {
       siteName="JoJo Countdown"
       previewImage="/img/jojo-event-main.jpg"
     >
-      <div className="w-10/12 lg:w-4/5 flex flex-col">
-        <h1 className="text-center text-2xl text-white">Thank you. The Event is over, see you next time.</h1>
-        <Image src="/img/jolyne-stone-ocean.jpeg" width={750} height={1061} />
+      <div className=" flex flex-col">
+        <h1 className="text-center text-2xl text-white mb-4">Thank you. The Event is over, see you next time.</h1>
+        <Image src="/img/jolyne-stone-ocean.jpeg" width={440} height={600} />
       </div>
     </Layout>
   );
