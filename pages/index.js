@@ -16,7 +16,7 @@ export default function Home(props) {
     >
       <div className=" flex flex-col">
         <h1 className="text-center text-2xl text-white mb-4">Thank you. The Event is over, see you next time.</h1>
-        <Image src="/img/jolyne-stone-ocean.jpeg" width={440} height={600} />
+        <Image src="/img/jolyne-stone-ocean.jpeg" width={380} height={580} />
       </div>
     </Layout>
   );
