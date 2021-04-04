@@ -14,8 +14,9 @@ export default function Home(props) {
       siteName="JoJo Countdown"
       previewImage="/img/jojo-event-main.jpg"
     >
-      <Event />
-      <Menacing />
+      <div className="rounded-lg lg:h-4/5 sm:h-auto w-10/12 lg:w-4/5 bg-cover bg-no-repeat bg-center relative">
+        <h1 className="text-center">Thank you. The Event is over, see you next time.</h1>
+      </div>
     </Layout>
   );
 }
