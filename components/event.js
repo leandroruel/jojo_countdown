@@ -5,6 +5,7 @@ import { useCookies, getCookie } from "react-cookie";
 
 export default function Event() {
   const [cookie, setCookie] = useCookies(["userTimezone"]);
+  let userDate = null;
 
   const {
     eventName,
@@ -29,6 +30,14 @@ export default function Event() {
     );
   }
 
+  console.log({eventDate})
+
+  if (cookie) {
+    userDate = new Date(cookie.userTimezone)
+  }
+
+  console.log({userDate})
+
   return (
     <div
       className="rounded-lg lg:h-4/5 sm:h-auto w-10/12 lg:w-4/5 bg-cover bg-no-repeat bg-center relative"
@@ -43,7 +52,7 @@ export default function Event() {
           dangerouslySetInnerHTML={{ __html: eventDescription }}
         ></div>
         <Counter start={new Date(eventDate)} />
-        {/* <div className="text-center text-pink-600 text-2xl">in your timezone: { new Date(cookie.userTimezone).toLocaleString() }</div> */}
+        <div className="text-center text-pink-600 text-2xl">in your timezone: { userDate.toLocaleString() }</div>
         <div className="flex flex-column md:flex-row items-center justify-around py-5">
           <div className="flex flex-row justify-between items-center border-2 py-5 px-4 rounded-lg">
             <div className="font-semibold pr-4">share:</div>
