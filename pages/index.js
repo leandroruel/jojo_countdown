@@ -2,7 +2,7 @@ import Head from "next/head";
 import Event from "components/event";
 import Copyright from "components/copyright";
 import Layout from "components/layout";
-import Menacing from "components/menacing";
+import Image from 'next/image';
 
 export default function Home(props) {
   return (
@@ -14,8 +14,9 @@ export default function Home(props) {
       siteName="JoJo Countdown"
       previewImage="/img/jojo-event-main.jpg"
     >
-      <div className="rounded-lg lg:h-4/5 sm:h-auto w-10/12 lg:w-4/5 bg-cover bg-no-repeat bg-center relative">
-        <h1 className="text-center">Thank you. The Event is over, see you next time.</h1>
+      <div className="w-10/12 lg:w-4/5 flex flex-col">
+        <h1 className="text-center text-2xl text-white">Thank you. The Event is over, see you next time.</h1>
+        <Image src="/img/jolyne-stone-ocean.jpeg" width={750} height={1061} />
       </div>
     </Layout>
   );

@@ -9,8 +9,6 @@ body {
 }
 
 body {
-  animation: bg-color 20s ease-in-out .2s infinite;
-  transition: background-color 5s ease-in-out;
   background-image:
     linear-gradient(
       60deg,
@@ -28,6 +26,7 @@ body {
       rgba(0, 0, 0, 0.1) 75%,
       rgba(0, 0, 0, 0.1)
     );
+    background-color: rgb(106 127 85);
     background-size: 70px 120px;
 }
 
@@ -46,29 +45,3 @@ a {
   box-sizing: border-box;
 }
 
-@keyframes bg-color {
-  0% {
-    background-color: #ff4ca3;
-  }
-  14% {
-    background-color: #bda0d8;
-  }
-  28% {
-    background-color: #882592;
-  }
-  42% {
-    background-color: #424344;
-  }
-  56% {
-    background-color: #f2a90c;
-  }
-  70% {
-    background-color: #c0e600;
-  }
-  84% {
-    background-color: #023c74;
-  }
-  100% {
-    background-color:  #ff4ca3;
-  }
-}
